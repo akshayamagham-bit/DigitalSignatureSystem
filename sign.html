@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Sign document · DigiTrust{% endblock %}
+{% block content %}
+<section class="panel">
+  <p class="eyebrow">STEP 1</p><h1>Sign a document</h1>
+  <p>Choose a file up to 25 MB. The app signs the file's exact bytes using RSA-PSS with SHA-256.</p>
+  <form method="post" enctype="multipart/form-data">
+    <label for="document">Document</label><input id="document" type="file" name="document" required>
+    <button type="submit">Create digital signature</button>
+  </form>
+  {% if signed %}
+  <div class="result success"><h2>✓ Signature created</h2><p>File: <strong>{{ filename }}</strong></p>
+    <a class="button" href="{{ url_for('download_signature', filename=sig_name) }}">Download signature (.sig)</a>
+    <a class="button secondary" href="{{ url_for('download_certificate') }}">Download certificate (.pem)</a>
+    <p class="small">Keep the original document, signature, and certificate together for verification.</p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

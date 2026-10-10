@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Verify signature · DigiTrust{% endblock %}
+{% block content %}
+<section class="panel">
+  <p class="eyebrow">STEP 2</p><h1>Verify a signature</h1>
+  <p>Provide the original file, its .sig signature, and the matching PEM certificate.</p>
+  <form method="post" enctype="multipart/form-data">
+    <label for="document">Document to verify</label><input id="document" type="file" name="document" required>
+    <label for="signature">Signature (.sig)</label><input id="signature" type="file" name="signature" required>
+    <label for="certificate">X.509 certificate (.pem)</label><input id="certificate" type="file" name="certificate" accept=".pem,.crt,.cer" required>
+    <button type="submit">Verify signature</button>
+  </form>
+  {% if result %}
+  <div class="result {{ 'success' if result[0] == 'valid' else 'failure' }}"><h2>{{ result[1] }}</h2><p>{{ result[2] }}</p></div>
+  {% endif %}
+</section>
+{% endblock %}

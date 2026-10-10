@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Certificate · DigiTrust{% endblock %}
+{% block content %}
+<section class="panel">
+  <p class="eyebrow">X.509 DETAILS</p><h1>Demo certificate</h1>
+  <p class="muted">This is a self-signed certificate generated locally on first run.</p>
+  <dl class="details">
+  {% for label, value in details.items() %}<dt>{{ label.replace('_', ' ')|title }}</dt><dd>{{ value }}</dd>{% endfor %}
+  </dl>
+  <a class="button" href="{{ url_for('download_certificate') }}">Download certificate (.pem)</a>
+</section>
+{% endblock %}
