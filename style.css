@@ -10,3 +10,9 @@ nav{display:flex;gap:22px;flex-wrap:wrap}nav a{color:#475467;text-decoration:non
 .panel{max-width:760px;margin:auto}.panel h1{font-size:2.5rem}form{display:flex;flex-direction:column;gap:12px;margin:24px 0}label{font-weight:700;font-size:.94rem}input[type=file]{padding:14px;background:#fafbff;border:1px dashed #cbd2e1;border-radius:10px;width:100%;margin-bottom:8px}form button{align-self:flex-start;margin-top:8px}
 .alert{padding:12px 16px;border-radius:10px;margin-bottom:18px}.alert.error,.failure{background:#fff0ef;color:var(--red);border:1px solid #ffd5d2}.alert.success,.success{background:#ecfdf3;color:var(--green);border:1px solid #abefc6}.result{padding:20px;border-radius:12px;margin-top:22px}.result h2{margin-top:0}.result p{color:inherit}.result .button{margin:6px 8px 6px 0}.small,.muted{font-size:.9rem;color:var(--muted)!important}.details{display:grid;grid-template-columns:180px 1fr;gap:12px;border-top:1px solid var(--line);padding-top:18px}.details dt{font-weight:700;color:#475467}.details dd{margin:0;overflow-wrap:anywhere}footer{text-align:center;padding:24px;color:#98a2b3;font-size:.85rem;border-top:1px solid var(--line)}
 @media(max-width:680px){.cards{grid-template-columns:1fr}.container{margin-top:28px}.details{grid-template-columns:1fr;gap:3px}.details dd{margin-bottom:12px}.hero{padding-top:20px}}
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Signature System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
